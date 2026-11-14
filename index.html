@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disney LLM Wiki | 迪士尼知識庫</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- 引入 marked.js 以進行即時 Markdown 渲染 -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+  <!-- 頂部導航列 -->
+  <header class="top-header">
+    <div class="brand" id="brand-home">
+      <span class="brand-icon">🏰</span>
+      <span class="brand-title">Disney LLM Wiki</span>
+    </div>
+
+    <div class="search-box-wrapper">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="search-input" class="search-input" placeholder="搜尋條目、角色、世界觀、標籤..." autocomplete="off">
+    </div>
+
+    <div class="header-meta">
+      <span class="badge-stat" id="stat-badge">載入中...</span>
+      <button class="btn-random" id="random-btn">🎲 隨機條目</button>
+    </div>
+  </header>
+
+  <!-- 主體應用區 -->
+  <div class="app-container">
+    <!-- 左側分類導航抽屜 -->
+    <aside class="sidebar" id="sidebar-nav">
+      <!-- 由 app.js 動態渲染 -->
+    </aside>
+
+    <!-- 中央內容閱讀區 -->
+    <main class="content-area" id="content-container">
+      <!-- 由 app.js 動態渲染首頁或條目 -->
+    </main>
+  </div>
+
+  <!-- 資料集與應用邏輯腳本 -->
+  <script src="wiki-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
